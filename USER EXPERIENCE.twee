@@ -1,0 +1,380 @@
+:: StoryTitle
+Museum
+
+
+:: StoryData
+{
+  "ifid": "EC14E29B-DE7C-4012-9210-C0A33E319AF9",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "Start",
+  "tag-colors": {
+    "header": "orange",
+    "base": "yellow",
+    "downstairs": "red",
+    "down": "red",
+    "wander": "purple",
+    "upstairs": "orange",
+    "pastpresent": "blue",
+    "TERRA": "green",
+    "DOC": "yellow",
+    "explore": "red",
+    "EXPLORE": "red",
+    "WelcomeScreen": "orange",
+    "Discovery": "green",
+    "Black": "yellow",
+    "TEMPLE": "orange"
+  },
+  "zoom": 0.6
+}
+
+
+:: Abstinence {"position":"550,1100","size":"200,100"}
+''“For ten days, I ate no meat, drank no wine, and denied all bodily pleasure.”''
+
+You feel something appear. Which way do you reach?
+(text-colour:red)[
+(link: "← Left")[(goto: "Sacred Path")]
+(link: "Right →")[(goto: "Forbidden Path")]]
+
+
+
+(text-colour:red)[
+[[The offering]]]
+
+
+:: Black Screen [Black] {"position":"437.5,475","size":"100,100"}
+“Sed noctis obscurae non obscuris imperiis evidenter monuit advenisse diem mihi semper optabilem” 
+
+“But in the darkness of night, with commands that were not dark, she clearly warned me that the day I had always desired had come.” (Apuleius, Metamorphoses, XI.22)
+
+
+ (text-colour:red)[[[temple reveal|TEMPLE]]]
+
+
+:: End {"position":"525,2000","size":"100,100"}
+
+
+(text-colour:red)[
+(link: "Access the Exhibition Guide (PDF)")[
+  (goto-url: "https://knkn.tiiny.site")
+]
+
+(link: "Share your thoughts – the Goddess listens")[
+  (goto-url: "https://forms.gle/mtReAgDu1MkKxDQ57")
+]]
+
+
+:: Explore Without Game [EXPLORE] {"position":"650,250","size":"100,100"}
+<div style="text-align:center; margin-top:1em;">
+  <img src="https://i.postimg.cc/XJPwQQWh/a1e8a9f1-e2bd-4bdb-923c-adb32e6f96bf.png"
+       style="max-width: 90%; border-radius: 10px; box-shadow: 0 8px 20px rgba(0,0,0,0.4); transition: transform 0.3s ease;"
+       onmouseover="this.style.transform='scale(1.03)'"
+       onmouseout="this.style.transform='scale(1)'"
+  >
+</div>
+
+
+<audio src= "https://static.wixstatic.com/mp3/438ce8_4008c694e66d4931a5f1d5505ab5d6f1.mp3" autoplay loop/>
+
+Welcome to the mysterious Temple of Isis! Here you can admire the ruins of the original roman temple and, with just 30 minutes by train, you could go visit the inside decoration, especially the colorful frescos in the beautiful National Archaeological Museum of Naples
+
+
+:: Forbidden Path {"position":"250,1200","size":"100,100"}
+(set: $forbidden to (either: "Meat", "Wine"))
+
+(background: black)[]
+(color: white)[
+You reached out and caught: '''$forbidden'''
+
+"Oh no! You broke the abstinence!"
+
+[[[Start Again->Abstinence]]]
+]
+
+
+
+:: Last to finish the Pilgrimage {"position":"525,1750","size":"100,100"}
+
+You have reached the final step of your pilgrimage and wih that You have been gifted a 50% discount ticket to the MANN!
+
+
+If you are at the MANN Museum in Naples, scan the final code to close your ritual journey.
+
+(text-colour:red)[  
+  [[Scan the code ]]]
+
+
+
+
+:: Next Step {"position":"275,1375","size":"100,100"}
+
+
+<div style="text-align:center; margin-top:1em;">
+  <img src="https://i.postimg.cc/Jn4qw2r4/750ecebe-f272-45b2-a246-89df89620f9f.png"
+       style="max-width: 120%; border-radius: 10px; box-shadow: 0 8px 20px rgba(0,0,0,0.4); transition: transform 0.3s ease;"
+       onmouseover="this.style.transform='scale(1.03)'"
+       onmouseout="this.style.transform='scale(1)'"
+  >
+</div>
+(text-colour:red)[
+ [[The Relevation]]]
+ 
+ 
+<audio src= "https://static.wixstatic.com/mp3/438ce8_8674a14061b34566aa8e3fe337080aec.mp3" autoplay loop/>
+
+
+
+:: PURIFY THE BODY – CROSS THE SACRED WATERS\  {"position":"437.5,725","size":"100,100"}
+
+
+<div style="text-align:center; margin-top:1em;">
+  <img src="https://i.postimg.cc/VkgHj1zH/eb217135-a17c-4109-9a33-4373b3daeb78.png"
+       style="max-width: 120%; border-radius: 10px; box-shadow: 0 8px 20px rgba(0,0,0,0.4); transition: transform 0.3s ease;"
+       onmouseover="this.style.transform='scale(1.03)'"
+       onmouseout="this.style.transform='scale(1)'"
+  >
+</div>
+
+
+
+(text-colour:red)[[[Go one step in front of you and cross the sacred water to purify your body|Purification]]]
+
+
+<audio src= "https://static.wixstatic.com/mp3/438ce8_3e08d881821d475da801b9775eb24848.mp3" autoplay loop/>
+
+
+:: Purification {"position":"437.5,850","size":"100,100"}
+“Iamque tempore, ut aiebat sacerdos, id postulante, stipatum me religiosa cohorte deducit ad proxumas balneas, et prius sueto lavacro traditum, praefatus deum veniam, purissime circumrorans abluit” (Book XI, 23) ( “Surrounded by a religious cohort, he led me to the nearest baths; and after I had first undergone the usual washing, having prayed for divine pardon, he thoroughly washed me with pure water.”)
+
+
+(text-colour:red)[
+[[Abstinence]]]
+
+
+:: Sacred Path {"position":"800,1275","size":"100,100"}
+(set: $sacred to (either:
+  "Sistrum – ancient musical instrument, part of the percussion family.",
+  "Situla – a bucket associated with Isis, symbol of motherhood.",
+  "Cow – symbol of Isis' maternal power and her headdress in Egyptian iconography.",
+  "Isis Knot – symbol of protection and eternal life, related to womanhood.",
+  "Ship – Romans prayed to Isis for sea safety; celebrated on March 5th (Navigium Isidis)."
+))
+
+''You reached out and caught:''  
+'''$sacred'''
+
+(text-colour:red)[[[Go Back->Abstinence]]]
+
+
+
+:: Scan the code\  {"position":"525,1875","size":"100,100"}
+You have seen her temple, and now her colors.
+May her mystery remain within you.
+
+(link: "Close the ritual")[
+  ''The ritual is now complete. The voice of Isis fades into silence, but her presence lingers in your memory.''  
+ (text-colour:red)[ 
+  [[Exit->End]]]
+]
+
+
+:: Start [base] {"position":"500,100","size":"100,100"}
+
+
+
+
+
+
+
+
+(text-colour:white)[[[Begin the Ritual|Welcome Screen]]
+[[Explore Without Game]]]
+
+
+
+:: Step One – Discovery [Discovery] {"position":"437.5,350","size":"100,100"}
+It seems there is something hiding under the sand, tap to find out
+
+<div style="text-align:center; margin-top:1em;">
+  <img src="https://i.postimg.cc/nhVfPyLP/7bb23eca-ffa4-4b2a-833d-d627154e025d.png"
+       style="max-width: 120%; border-radius: 10px; box-shadow: 0 8px 20px rgba(0,0,0,0.4); transition: transform 0.3s ease;"
+       onmouseover="this.style.transform='scale(1.03)'"
+       onmouseout="this.style.transform='scale(1)'"
+  >
+</div>
+
+
+
+
+
+
+
+
+(text-colour:red)[ [[Continue|Black Screen]]]
+
+
+
+
+:: TEMPLE [TEMPLE] {"position":"437.5,600","size":"100,100"}
+
+
+
+(text-colour:#f1f3f5)[ [[Enter|PURIFY THE BODY – CROSS THE SACRED WATERS ]]]
+
+
+
+
+
+
+
+:: The Journey is not over {"position":"525,1625","size":"100,100"}
+<audio src= "https://static.wixstatic.com/mp3/438ce8_213921e4a2644c92acbee605f83e1f4c.mp3" autoplay loop/>
+
+
+<div style="text-align:center; margin-top:1em;">
+  <img src="https://i.postimg.cc/GpmPhSJ8/8042c3d3-fb68-42c1-aaaa-f346a3ae71f0.png"
+       style="max-width: 120%; border-radius: 10px; box-shadow: 0 8px 20px rgba(0,0,0,0.4); transition: transform 0.3s ease;"
+       onmouseover="this.style.transform='scale(1.03)'"
+       onmouseout="this.style.transform='scale(1)'"
+  >
+</div>
+
+The Godess Isis : “Thank you for answering to my call, I will await for you in Naples. Complete your pilgrimage and come see the original frescos that once decorated my beautiful temple”. 
+
+
+(text-colour:red)[
+[[Last to finish the Pilgrimage]]
+]
+
+
+
+
+
+
+
+:: The Relevation {"position":"525,1500","size":"100,100"}
+(text-colour:blue)[Congratulations, you finished your initiation ritual, one last step to finally see your goddess Isis. Complete this puzzle and reconstruct the fresco.
+]
+(text-colour:red)[
+[[The Journey is not over]]]
+
+
+
+
+
+
+:: The offering {"position":"550,1250","size":"100,100"}
+(set: $bird to (either: "dove", "goose", "peacock", "sparrow"))
+
+''Find the sacred bird and give it to the priest.''
+
+(link: "Scan the temple")[
+	(if: $bird is "dove")[
+		You found a '''dove'''.  
+		
+		(text-colour:red)[[[Continue->Next Step]]]
+	]
+	(else:)[
+		You found a '''$bird'''.  
+		That is not the sacred bird. Try again.  
+		(text-colour:red)[[[Try Again->Try Again]]]
+	]
+]
+
+
+
+
+
+
+
+
+:: Try Again {"position":"725,1500","size":"100,100"}
+(set: $bird to (either: "dove", "goose", "peacock", "sparrow"))
+
+''Find the sacred bird and give it to the priest.''
+
+(link: "Scan the temple")[
+	(if: $bird is "dove")[
+		You found a '''dove'''.  
+		
+		(text-colour:red)[[[Continue->Next Step]]]
+	]
+	(else:)[
+		You found a '''$bird'''.  
+		That is not the sacred bird. Try again.  
+		(text-colour:red)[[[Try Again->Try Again]]]
+	]
+]
+
+
+
+:: Welcome Screen [WelcomeScreen] {"position":"437.5,225","size":"100,100"}
+Welcome visitor, the great goddess Isis was waiting for you
+
+
+(text-colour:red)[ [[Continue|Step One – Discovery]]]
+
+
+
+
+<audio src= "https://static.wixstatic.com/mp3/438ce8_c964e4a8ba88496c970a5b93ee77955c.mp3" autoplay loop/>
+
+
+:: StoryStylesheet [stylesheet]
+tw-story[tags~="base"]{background-image:url("https://i.postimg.cc/L5FTBx2T/Chat-GPT-Image-Jun-22-2025-10-37-52-PM.png"); background-size:cover;}
+
+tw-story[tags~="WelcomeScreen"]{background-image:url(""); background-size:cover;}
+
+tw-story[tags~="EXPLORE"]{background-image:url(); background-size:cover;}
+
+tw-story[tags~="Discovery"]{background-image:url("")
+; background-size:cover;}
+
+tw-story[tags~="TEMPLE"] {
+  background-image: url("https://i.postimg.cc/xdV6M2B4/4312fb77-572f-4f54-bd4b-7426d1dc8a61.png");
+  background-size: cover;
+}
+
+tw-story[tags~="Offering"] {
+  background-image: url("");
+  background-size: cover;
+}
+
+tw-story[tags~="statues"] {
+background-image: 
+url("https://static.wixstatic.com/media/d436be_a4bd1c537c7f4d98920ab0680f691f89~mv2.jpg");
+background-size: cover;
+}
+tw-story[tags~="statu"] {
+background-image: 
+url("https://static.wixstatic.com/media/d436be_62ff84df85a248b9a4d99371738909cc~mv2.jpg");
+background-size: cover;
+}
+
+tw-story[tags~="TARDIS"] {
+background-image: 
+url("https://static.wixstatic.com/media/d436be_536dfdae17824c0f8576b9a3e6ded821~mv2.jpg");
+background-size: cover;
+}
+
+tw-story[tags~="TERRA"] {
+  background-image: url("https://static.wixstatic.com/media/d436be_e5a3de26db4a4f0b8b1ccefb61cb2377~mv2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+tw-story[tags~="DOC"] {
+  background-image: url(https://static.wixstatic.com/media/d436be_728bbc300d244ff9912c84b0b1e262d5~mv2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+@keyframes fadein {
+    to { opacity: 1; }
+}
+
+
+
